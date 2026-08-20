@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08152c" />
+    <meta name="description" content="حمّل تطبيق KumoScan لمشاهدة الأنمي وقراءة المانجا." />
+    <title>تحميل KumoScan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="KumoScan">
+          <img src="assets/kumoscan-app-icon.png" alt="أيقونة KumoScan" />
+          <span>KumoScan</span>
+        </a>
+        <span class="beta-badge">نسخة تجريبية</span>
+      </header>
+
+      <section id="top" class="hero">
+        <img class="hero-icon" src="assets/kumoscan-app-icon.png" alt="أيقونة تطبيق KumoScan" />
+        <p class="hero-eyebrow">تطبيق الأنمي والمانجا</p>
+        <h1>شاهد واقرأ ما تحب<br /><span>بطريقة أبسط.</span></h1>
+        <p class="hero-copy">KumoScan يجمع الأنمي والمانجا ومكتبتك الشخصية والتحميل دون اتصال في تجربة عربية واحدة.</p>
+        <p class="testing-note"><span>●</span> التطبيق حاليًا في مرحلة الاختبار؛ قد تتغير بعض الميزات أثناء التطوير.</p>
+      </section>
+
+      <section class="download-section" aria-labelledby="download-heading">
+        <h2 id="download-heading">حمّل التطبيق الآن</h2>
+        <p>متاح حاليًا لنظام Android.</p>
+        <div class="download-actions">
+          <a id="android-download" class="platform-button android" href="#" download>
+            <span class="platform-icon">↓</span>
+            <span><strong>تحميل لأندرويد</strong><small>Android APK</small></span>
+          </a>
+          <button class="platform-button ios" type="button" disabled aria-label="تطبيق iPhone قريبًا">
+            <span class="platform-icon apple">●</span>
+            <span><strong>تحميل للآيفون</strong><small>قريبًا</small></span>
+            <em>قريبًا</em>
+          </button>
+        </div>
+      </section>
+
+      <section class="simple-features" aria-label="مزايا التطبيق">
+        <article><span>◈</span><div><h2>أنمي ومانجا</h2><p>كل أعمالك في منصة واحدة.</p></div></article>
+        <article><span>♡</span><div><h2>مكتبتك الخاصة</h2><p>احفظ وتابع ما تحبه بسهولة.</p></div></article>
+        <article><span>↓</span><div><h2>دون اتصال</h2><p>أضف ما تريد وشاهده لاحقًا.</p></div></article>
+      </section>
+
+      <section class="screenshots" id="screenshots" aria-labelledby="screens-title">
+        <div class="section-title"><p>لقطات من التطبيق</p><h2 id="screens-title">واجهة واضحة ومريحة.</h2></div>
+        <div class="screens-list">
+          <figure class="screenshot-slot">
+            <img src="assets/screenshots/home.jpg" alt="لقطة شاشة الصفحة الرئيسية لتطبيق KumoScan" data-screenshot />
+            <div class="screenshot-fallback"><span>الصورة 01</span><strong>ضع لقطة الصفحة الرئيسية هنا</strong><small>assets/screenshots/home.jpg</small></div>
+           
+          </figure>
+          <figure class="screenshot-slot">
+            <img src="assets/screenshots/library.jpg" alt="لقطة شاشة مكتبة KumoScan" data-screenshot />
+            <div class="screenshot-fallback"><span>الصورة 02</span><strong>ضع لقطة المكتبة هنا</strong><small>assets/screenshots/library.jpg</small></div>
+            
+          </figure>
+          <figure class="screenshot-slot">
+            <img src="assets/screenshots/downloads.jpg" alt="لقطة شاشة قائمة التحميلات في KumoScan" data-screenshot />
+            <div class="screenshot-fallback"><span>الصورة 03</span><strong>ضع لقطة التحميلات هنا</strong><small>assets/screenshots/downloads.jpg</small></div>
+            
+          </figure>
+        </div>
+      </section>
+
+      <section class="bottom-download">
+        <p>جاهز للتجربة؟</p>
+        <h2>حمّل KumoScan وابدأ الآن.</h2>
+        <a id="android-download-bottom" class="bottom-link" href="#" download>تحميل لأندرويد <span>↓</span></a>
+      </section>
+
+      <footer>
+        <div class="brand"><img src="assets/kumoscan-app-icon.png" alt="" /><span>KumoScan</span></div>
+        <p>التطبيق في مرحلة الاختبار.</p>
+        <span>© <span id="year"></span> KumoScan</span>
+      </footer>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

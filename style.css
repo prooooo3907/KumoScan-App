@@ -1,0 +1,51 @@
+:root {
+  --bg: #08152c;
+  --bg-soft: #0d1e3d;
+  --card: #102448;
+  --text: #f5f8ff;
+  --muted: #aabbd8;
+  --blue: #4694ff;
+  --cyan: #44d5f3;
+  --line: rgba(173, 205, 253, .16);
+  --green: #55d9a6;
+  --red: #ff8c98;
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; margin: 0; background: radial-gradient(circle at 50% -15%, #173a78 0%, var(--bg) 47%, #061025 100%); color: var(--text); font-family: Cairo, Arial, sans-serif; }
+button, a { font: inherit; }
+a { color: inherit; text-decoration: none; }
+
+.page-shell { width: min(100%, 620px); min-height: 100vh; margin: auto; padding: 0 20px; overflow: hidden; }
+.topbar { display: flex; align-items: center; justify-content: space-between; min-height: 78px; }
+.brand { display: inline-flex; align-items: center; gap: 9px; direction: ltr; font-family: Outfit, Cairo, sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -.7px; }
+.brand img { width: 31px; height: 31px; border-radius: 10px; }
+.beta-badge { padding: 7px 11px; border: 1px solid rgba(75, 210, 243, .28); border-radius: 999px; background: rgba(68, 213, 243, .1); color: #a5edfb; font-size: 11px; font-weight: 800; }
+
+.hero { padding: 42px 0 40px; text-align: center; }
+.hero-icon { width: 94px; height: 94px; border-radius: 28px; box-shadow: 0 18px 45px rgba(39, 143, 255, .28); }
+.hero-eyebrow { margin: 21px 0 8px; color: var(--cyan); font-size: 13px; font-weight: 800; }
+h1 { margin: 0; font-size: clamp(35px, 10vw, 49px); line-height: 1.28; letter-spacing: -1.7px; font-weight: 900; }
+h1 span { color: var(--cyan); }
+.hero-copy { max-width: 460px; margin: 19px auto 0; color: var(--muted); font-size: 15px; font-weight: 600; line-height: 2.1; }
+.testing-note { display: flex; align-items: flex-start; justify-content: center; gap: 7px; max-width: 450px; margin: 23px auto 0; padding: 12px 15px; border: 1px solid rgba(255, 194, 98, .22); border-radius: 16px; background: rgba(255, 184, 82, .07); color: #ebcf9c; font-size: 12px; line-height: 1.8; text-align: right; }
+.testing-note span { margin-top: 5px; color: #ffc15a; font-size: 9px; }
+
+.download-section { padding: 28px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, rgba(19, 45, 87, .84), rgba(10, 25, 51, .9)); box-shadow: 0 16px 42px rgba(0, 4, 18, .24); text-align: center; }
+.download-section h2 { margin: 0; font-size: 23px; }.download-section>p { margin: 8px 0 22px; color: var(--muted); font-size: 13px; }
+.download-actions { display: grid; gap: 12px; }
+.platform-button { position: relative; width: 100%; min-height: 70px; display: flex; align-items: center; gap: 13px; padding: 11px 17px; border: 0; border-radius: 18px; text-align: right; transition: transform .2s ease, filter .2s ease; }
+.platform-button:not(:disabled):hover { transform: translateY(-2px); filter: brightness(1.07); }.platform-button.android { background: linear-gradient(135deg, var(--blue), var(--cyan)); color: #061125; box-shadow: 0 13px 28px rgba(48, 151, 255, .25); }.platform-button.ios { border: 1px solid rgba(172, 202, 246, .12); background: rgba(6, 15, 31, .37); color: #8fa2c2; cursor: not-allowed; opacity: .8; }
+.platform-icon { width: 42px; height: 42px; display: grid; flex: none; place-items: center; border-radius: 14px; background: rgba(3, 16, 37, .14); font-family: Outfit; font-size: 27px; font-weight: 800; }.platform-icon.apple { font-size: 13px; color: #e2e9f5; }.platform-button strong, .platform-button small { display: block; }.platform-button strong { font-size: 16px; font-weight: 900; }.platform-button small { margin-top: 2px; font-family: Outfit, Cairo, sans-serif; font-size: 11px; font-weight: 700; opacity: .7; direction: ltr; text-align: right; }.platform-button em { margin-right: auto; padding: 5px 9px; border-radius: 999px; background: rgba(173, 195, 229, .1); color: #9eafcc; font-size: 10px; font-style: normal; font-weight: 800; }
+
+.simple-features { display: grid; gap: 12px; margin: 35px 0 65px; }.simple-features article { display: flex; align-items: center; gap: 15px; min-height: 80px; padding: 15px 17px; border: 1px solid var(--line); border-radius: 18px; background: rgba(12, 29, 59, .62); }.simple-features article>span { width: 42px; height: 42px; display: grid; flex: none; place-items: center; border-radius: 14px; background: rgba(59, 147, 255, .13); color: var(--cyan); font-family: Outfit; font-size: 20px; }.simple-features h2 { margin: 0; font-size: 16px; }.simple-features p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+
+.screenshots { margin: 0 -20px; padding: 42px 20px 65px; background: rgba(5, 15, 34, .45); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }.section-title { margin-bottom: 24px; text-align: center; }.section-title p { margin: 0 0 6px; color: var(--cyan); font-size: 12px; font-weight: 800; }.section-title h2 { margin: 0; font-size: 27px; }.screens-list { display: grid; gap: 28px; }.screenshot-slot { margin: 0; }.screenshot-slot { position: relative; min-height: 465px; overflow: hidden; border: 1px solid rgba(157, 196, 255, .2); border-radius: 22px; background: linear-gradient(145deg, #10254a, #0a1730); box-shadow: 0 16px 40px rgba(0, 0, 0, .24); }.screenshot-slot img { position: relative; z-index: 2; display: none; width: 100%; min-height: 465px; object-fit: cover; object-position: top; }.screenshot-slot.has-image img { display: block; }.screenshot-fallback { position: absolute; inset: 0; display: grid; place-content: center; padding: 28px; background: radial-gradient(circle at 50% 25%, rgba(63, 153, 255, .22), transparent 26%), linear-gradient(145deg, #132e5b, #0a1730 72%); text-align: center; }.screenshot-slot.has-image .screenshot-fallback { display: none; }.screenshot-fallback::before { content: ""; width: 76px; height: 76px; margin: 0 auto 18px; border: 1px dashed rgba(173, 211, 255, .55); border-radius: 22px; background: rgba(84, 166, 255, .08); }.screenshot-fallback span { color: var(--cyan); font-family: Outfit; font-size: 12px; font-weight: 800; }.screenshot-fallback strong { display: block; margin: 9px 0 5px; color: #eaf3ff; font-size: 18px; }.screenshot-fallback small { color: var(--muted); font-family: Outfit, Cairo, sans-serif; font-size: 11px; direction: ltr; }.screenshot-slot figcaption { position: absolute; z-index: 3; right: 14px; bottom: 14px; left: 14px; padding: 10px 13px; border: 1px solid rgba(174, 207, 255, .14); border-radius: 13px; background: rgba(7, 18, 39, .8); color: #e7f0ff; font-size: 13px; font-weight: 800; backdrop-filter: blur(10px); }
+
+.bottom-download { margin: 65px 0 48px; padding: 34px 25px; border-radius: 24px; background: linear-gradient(135deg, #257ded, #43cff0); color: #061229; text-align: center; }.bottom-download p { margin: 0; font-size: 13px; font-weight: 800; opacity: .7; }.bottom-download h2 { margin: 7px 0 21px; font-size: 26px; line-height: 1.4; }.bottom-link { display: inline-flex; align-items: center; gap: 12px; padding: 13px 19px; border-radius: 14px; background: #07162f; color: #eff8ff; font-size: 14px; font-weight: 900; }.bottom-link span { font-family: Outfit; font-size: 20px; }
+footer { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 0 0 34px; color: #7f92b3; font-size: 11px; text-align: center; }.brand img { width: 28px; height: 28px; }footer p { margin: 0; }footer>span { font-family: Outfit, Cairo, sans-serif; }
+.toast { position: fixed; z-index: 10; right: 18px; bottom: 18px; left: 18px; padding: 14px 16px; border: 1px solid rgba(161, 203, 255, .2); border-radius: 15px; background: #122a52; color: #edf6ff; box-shadow: 0 16px 38px rgba(0,0,0,.35); font-size: 13px; font-weight: 700; opacity: 0; transform: translateY(15px); pointer-events: none; transition: .2s ease; }.toast.show { opacity: 1; transform: translateY(0); }
+
+@media (min-width: 700px) { .page-shell { padding: 0 28px; }.screenshots { margin: 0 -28px; padding-inline: 28px; }.screens-list { grid-template-columns: repeat(3, 1fr); gap: 16px; }.screenshot-slot, .screenshot-slot img { min-height: 420px; }.screenshot-fallback strong { font-size: 14px; }.screenshot-fallback small { font-size: 9px; }.screenshot-slot figcaption { right: 8px; bottom: 8px; left: 8px; padding: 8px; font-size: 11px; }.simple-features { grid-template-columns: repeat(3, 1fr); }.simple-features article { align-items: flex-start; flex-direction: column; min-height: 170px; }.bottom-download { padding: 42px; } }
