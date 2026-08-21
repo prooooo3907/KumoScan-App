@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#08152c" />
+    <title>لوحة تحكم KumoScan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <main class="dashboard-shell">
+      <section id="login-view" class="login-view" aria-labelledby="login-title">
+        <div class="login-card">
+          <a class="brand" href="index.html" aria-label="العودة إلى موقع KumoScan">
+            <img src="assets/kumoscan-app-icon.png" alt="أيقونة KumoScan" />
+            <span>KumoScan</span>
+          </a>
+          <p class="eyebrow">منطقة الإدارة</p>
+          <h1 id="login-title">تسجيل الدخول إلى لوحة البيانات</h1>
+          <p class="login-copy">تعرِض اللوحة إحصاءات الزيارات وطلبات تنزيل تطبيق Android المسجلة في Firestore.</p>
+          <form id="login-form" novalidate>
+            <label for="username">اسم المستخدم</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+            <label for="password">كلمة المرور</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+            <p id="login-error" class="form-message" role="alert" aria-live="assertive"></p>
+            <button id="login-button" type="submit">دخول آمن</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="dashboard-view" class="dashboard-view" hidden aria-labelledby="dashboard-title">
+        <header class="dashboard-header">
+          <div>
+            <a class="brand" href="index.html" aria-label="العودة إلى موقع KumoScan">
+              <img src="assets/kumoscan-app-icon.png" alt="أيقونة KumoScan" />
+              <span>KumoScan</span>
+            </a>
+            <p class="eyebrow">لوحة مراقبة الأجهزة</p>
+            <h1 id="dashboard-title">سجل زيارة الأجهزة والتحميلات</h1>
+          </div>
+          <div class="header-actions">
+            <button id="refresh-button" class="secondary-button" type="button">تحديث البيانات</button>
+            <button id="logout-button" class="logout-button" type="button">تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <p id="dashboard-status" class="status-message" role="status" aria-live="polite">جارٍ تحميل البيانات…</p>
+
+        <section class="stats-grid" aria-label="ملخص الإحصاءات">
+          <article class="stat-card">
+            <span>إجمالي الأجهزة</span>
+            <strong id="total-devices">—</strong>
+            <small>أجهزة فريدة زارت الموقع</small>
+          </article>
+          <article class="stat-card accent">
+            <span>أجهزة طلبت التحميل</span>
+            <strong id="downloading-devices">—</strong>
+            <small>عدد الأجهزة الفريدة التي ضغطت التحميل</small>
+          </article>
+          <article class="stat-card">
+            <span>طلبات التحميل المعروضة</span>
+            <strong id="download-requests">—</strong>
+            <small>إجمالي الطلبات ضمن آخر 100 سجل</small>
+          </article>
+        </section>
+
+        <section class="table-card" aria-labelledby="table-title">
+          <div class="table-card-header">
+            <div>
+              <h2 id="table-title">أحدث الأجهزة</h2>
+              <p>يتم الترتيب حسب آخر دخول للموقع. تظهر أحدث 100 سجلات.</p>
+            </div>
+            <span id="last-updated" class="updated-at">—</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>الجهاز والموديل</th>
+                  <th>النوع والمنصة</th>
+                  <th>المتصفح</th>
+                  <th>اللغة / البلد</th>
+                  <th>آخر دخول</th>
+                  <th>الزيارات</th>
+                  <th>التحميلات</th>
+                </tr>
+              </thead>
+              <tbody id="device-table-body">
+                <tr><td colspan="7" class="empty-cell">جارٍ تحميل السجلات…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>
