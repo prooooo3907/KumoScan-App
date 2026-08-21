@@ -1,5 +1,5 @@
 
-const APK_FILE_NAME = 'com.kumoscan.app(1.0.0).apk';
+const APK_FILE_NAME = 'com.kumoscan.app(1.1.0.beta).apk';
 const DOWNLOAD_URL = `app/${APK_FILE_NAME}`;
 
 const toast = document.querySelector('#toast');
